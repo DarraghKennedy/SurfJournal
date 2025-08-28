@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surf Spot Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌊 Surf Spot Journal</h1>
+  </header>
+
+  <main>
+    <section id="form-section">
+      <h2>Log a Surf Session</h2>
+      <form id="session-form">
+        <label>Spot Name:</label>
+        <input type="text" id="spot" required>
+
+        <label>Date:</label>
+        <input type="date" id="date" required>
+
+        <label>Wave Height (ft):</label>
+        <input type="number" id="waveHeight" min="0" step="0.5">
+
+        <label>Conditions:</label>
+        <select id="conditions">
+          <option value="Glassy">Glassy</option>
+          <option value="Clean">Clean</option>
+          <option value="Messy">Messy</option>
+          <option value="Blown Out">Blown Out</option>
+        </select>
+
+        <label>Notes:</label>
+        <textarea id="notes"></textarea>
+
+        <button type="submit">Save Session</button>
+      </form>
+    </section>
+
+    <section id="log-section">
+      <h2>Past Sessions</h2>
+      <ul id="session-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
